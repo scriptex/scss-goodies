@@ -1,0 +1,7 @@
+// https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+@mixin unbreak($hyphens: auto) {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	hyphens: $hyphens;
+}

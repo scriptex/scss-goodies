@@ -8,6 +8,7 @@
  * @param $colors - Map of colors
  * @param $stops - Map of color stops
  * @param $direction - One of 'horizontal' or 'vertical'
+ *
  * @return - Multiple background declaration consisting of
  * many linear gradients
  *
@@ -17,22 +18,14 @@
  */
 @mixin rainbow($colors, $stops, $direction: 'horizontal') {
 	$dir: to right;
-	$background: '';
+	$background: ();
 
 	@if $direction == 'vertical' {
 		$dir: to bottom;
 	}
 
 	@each $name, $color in $colors {
-		$list: map-keys($colors);
 		$slash: unquote('/');
-		$index: index($list, $name);
-		$comma: unquote(', ');
-
-		@if $index == length($list) {
-			$comma: unquote('');
-		}
-
 		$offset: map-get($stops, $name);
 		$gradient: linear-gradient($dir, $color 0%, $color 100%);
 		$size: $offset 100%;
@@ -42,9 +35,8 @@
 		}
 
 		// prettier-ignore
-		$background: $background + $gradient no-repeat 0% 0% $slash $size + $comma;
+		$background: append($background, $gradient no-repeat 0% 0% $slash $size, comma);
 	}
-
-	$background: unquote($background);
-	background: $background;
+  
+	background: unquote($background);
 }

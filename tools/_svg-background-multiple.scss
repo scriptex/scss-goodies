@@ -1,0 +1,11 @@
+@import './svg-url';
+
+@mixin multi-background-svg($backgrounds...) {
+	$combined-background: ();
+
+	@each $background in $backgrounds {
+		$combined-background: append($combined-background, $background, comma);
+	}
+
+	background-image: unquote($combined-background);
+}

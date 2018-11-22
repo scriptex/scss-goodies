@@ -1,0 +1,5 @@
+@import './svg-url';
+
+@mixin background-svg($svg, $repeat: no-repeat, $position: 0 0, $size: 100% 100%) {
+	background: svg-url($svg) $repeat $position / $size;
+}

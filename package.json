@@ -17,5 +17,6 @@
   "dependencies": {},
   "devDependencies": {},
   "main": "index.scss",
+  "style": "index.scss",
   "private": true
 }

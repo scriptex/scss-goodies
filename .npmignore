@@ -33,3 +33,6 @@ yarn.lock
 # Prettier
 .prettierrc
 .prettierignore
+
+# Config files
+renovate.json

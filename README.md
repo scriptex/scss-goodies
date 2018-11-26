@@ -54,7 +54,7 @@ Then use the mixin:
  * @param $colors    - SCSS Map of colors
  * @param $stops     - SCSS Map of color stops
  * @param $direction - One of 'horizontal' or 'vertical'
-*/
+ */
 @include rainbow($colors, $stops, $direction);
 ```
 
@@ -79,7 +79,7 @@ Then use the mixin:
  * @param: $size       - width/height of the triangle. Default: 2rem
  * @param: $background - any valid CSS background declaration. Default: red
  * @param: $radius     - true or false (if false, no radius). Default: true
-*/
+ */
 @include rainbow($size, $background, $radius);
 ```
 
@@ -101,7 +101,7 @@ Then use the mixin:
 ```scss
 /*
  * @param: $hyphens - one of 'none', 'manual' or 'auto'. Default: auto
-*/
+ */
 @include unbreak($size, $background, $radius);
 ```
 
@@ -125,7 +125,7 @@ Then use the mixin:
  * @param: $repeat     - background-repeat property. Default: no-repeat
  * @param: $position   - background-position property. Default: 50% 50%
  * @param: $size       - background-size property. Default: 2rem 2rem
-*/
+ */
 @include loader($loader, $repeat, $position, $size);
 ```
 
@@ -175,7 +175,7 @@ $result: str-replace($string, $search, $replace: '');
 
 /*
  * $result should equal to 'something awesome'
-*/
+ */
 ```
 
 ---
@@ -198,7 +198,7 @@ Then use the mixin:
  * @param: $repeat     - background-repeat property. Default: no-repeat
  * @param: $position   - background-position property. Default: 0 0
  * @param: $size       - background-size property. Default: 100% 100%
-*/
+ */
 @include background-svg($svg, $repeat, $position, $size);
 ```
 
@@ -219,7 +219,7 @@ Then use the mixin:
 ```scss
 /*
  * Each parameter is a valid SVG code string
-*/
+ */
 @include multi-background-svg($svg1, $svg2, $svg3, $svg4);
 ```
 

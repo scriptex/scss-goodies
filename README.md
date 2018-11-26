@@ -102,7 +102,7 @@ Then use the mixin:
 /*
  * @param: $hyphens - one of 'none', 'manual' or 'auto'. Default: auto
  */
-@include unbreak($size, $background, $radius);
+@include unbreak($hyphens);
 ```
 
 ---

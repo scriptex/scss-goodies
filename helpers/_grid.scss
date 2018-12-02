@@ -1,0 +1,61 @@
+$grid-cols: 12 !default;
+$grid-sizes: 1, 2, 3, 4, 6 !default;
+$grid-gutter: 16px !default; // Use anything but % values cuz Firefox does not like it...
+$grid-element: '.o-grid' !default;
+$grid-outputs-css: true !default;
+$grid-breakpoints: (
+	'small': 768px,
+	'medium': 1024px,
+	'large': 1280px
+) !default;
+
+@function grid-item-width($columns) {
+	$items: $grid-cols / $columns;
+	$column: 100% / $items;
+	$extra-space: $grid-gutter / $items;
+
+	@return calc((#{$column} + #{$extra-space}) - #{$grid-gutter});
+}
+
+@mixin grid($items: 4, $gutter: $grid-gutter) {
+	display: flex;
+	flex-wrap: wrap;
+
+	> * {
+		margin-bottom: $gutter;
+
+		@if $items > 1 {
+			width: grid-item-width($grid-cols / $items);
+		} @else {
+			width: 100%;
+		}
+
+		&:nth-child(1n) {
+			margin-right: $gutter;
+		}
+
+		&:nth-child(#{$items}n) {
+			margin-right: 0;
+		}
+	}
+}
+
+@if ($grid-outputs-css) {
+	#{$grid-element} {
+		width: 100%;
+
+		> * {
+			margin-bottom: $grid-gutter;
+		}
+
+		@each $name, $breakpoint in $grid-breakpoints {
+			@each $size in $grid-sizes {
+				@media screen and (min-width: #{$breakpoint}) {
+					&[data-grid-items-#{$name}='#{$size}'] {
+						@include grid($items: $size);
+					}
+				}
+			}
+		}
+	}
+}

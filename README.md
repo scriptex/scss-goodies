@@ -44,6 +44,20 @@ For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
 
 You can control the size of the grid items on all supported resolutions by using `data-*` attributes.
 
+```scss
+@import 'scss-helpers/helpers/grid';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param $items     - Number of grid items
+ * @param $gutter    - Gutter between items
+ */
+@include grid($items, $gutter);
+```
+
 ### Rainbow
 
 This is a mixin for multiple color stops gradient without blurs and fading between stops.

@@ -36,6 +36,14 @@ More details about each file can be found below.
 
 ## Helpers
 
+### Grid
+
+This mixins creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used. 
+
+For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
+
+You can control the size of the grid items on all supported resolutions by using `data-*` attributes.
+
 ### Rainbow
 
 This is a mixin for multiple color stops gradient without blurs and fading between stops.

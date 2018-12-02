@@ -1,8 +1,14 @@
 // Helpers
+@import 'helpers/grid';
+@import 'helpers/loader';
 @import 'helpers/rainbow';
 @import 'helpers/triangle';
 @import 'helpers/unbreak';
 
 // Tools
-@import 'tools/v';
 @import 'tools/hover';
+@import 'tools/string-replace';
+@import 'tools/svg-background-multiple';
+@import 'tools/svg-background';
+@import 'tools/svg-url';
+@import 'tools/v';

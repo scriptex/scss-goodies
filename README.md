@@ -82,6 +82,13 @@ Then use the mixin:
 
 ---
 
+### Select
+
+This is mixib for cross-browser styling of default (native) select elements.
+The mixin is still a work in progress.
+
+---
+
 ### Triangle
 
 This is a mixin for triangle shape with rounded corners (or without, it's up to you).

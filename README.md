@@ -84,8 +84,26 @@ Then use the mixin:
 
 ### Select
 
-This is mixib for cross-browser styling of default (native) select elements.
-The mixin is still a work in progress.
+This is a mixin for cross-browser styling of default (native) select elements.
+You can see a demo [here](https://codepen.io/scriptex/pen/jXjWbQ)
+
+To import only this mixin, use
+
+```scss
+@import 'scss-helpers/helpers/select';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $text-color       - Color of the text
+ * @param: $border-color     - Color of the border
+ * @param: $background-color - Color of the background
+ * @param: $shadow-color     - Color of the box-shadow
+ */
+@include select(#444, #aaa, #fff, #000);
+```
 
 ---
 

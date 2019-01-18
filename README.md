@@ -102,7 +102,7 @@ Then use the mixin:
  * @param: $background-color - Color of the background
  * @param: $shadow-color     - Color of the box-shadow
  */
-@include select(#444, #aaa, #fff, #000);
+@include select($text-color, $border-color, $background-color, $shadow-color);
 ```
 
 ---

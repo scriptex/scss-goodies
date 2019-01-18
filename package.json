@@ -1,22 +1,19 @@
 {
-  "name": "scss-helpers",
-  "version": "0.0.1",
-  "description": "SCSS helpers for every day usage",
-  "scripts": {},
-  "keywords": [
-    "SCSS",
-    "helpers"
-  ],
-  "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-  "repository": "https://github.com/scriptex/scss-helpers",
-  "bugs": {
-    "url": "https://github.com/scriptex/scss-helpers/issues",
-    "email": "scriptex.bg@gmail.com"
-  },
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {},
-  "main": "index.scss",
-  "style": "index.scss",
-  "private": true
+	"name": "scss-helpers",
+	"version": "0.1.0",
+	"description": "SCSS helpers for every day usage",
+	"keywords": [
+		"SCSS",
+		"SCSS helpers",
+		"SCSS tools"
+	],
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"repository": "https://github.com/scriptex/scss-helpers",
+	"bugs": {
+		"url": "https://github.com/scriptex/scss-helpers/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"license": "MIT",
+	"main": "index.scss",
+	"style": "index.scss"
 }

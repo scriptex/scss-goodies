@@ -1,3 +1,10 @@
+/*
+ * Cross browser mixin for native select field style.
+ * @param: $text-color       - Color of the text
+ * @param: $border-color     - Color of the border
+ * @param: $background-color - Color of the background
+ * @param: $shadow-color     - Color of the box-shadow
+ */
 @mixin select(
 	$text-color: #444,
 	$border-color: #444,

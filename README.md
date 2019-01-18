@@ -1,7 +1,6 @@
 [![GitHub release](https://img.shields.io/github/release/scriptex/scss-goodies.svg)](https://github.com/scriptex/scss-goodies/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/scriptex/scss-goodies.svg)](https://github.com/scriptex/scss-goodies/issues)
 [![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/scss-goodies.svg)](https://github.com/scriptex/scss-goodies/commits/master)
-[![Build Status](https://travis-ci.org/scriptex/scss-goodies.svg?branch=master)](https://travis-ci.org/scriptex/scss-goodies)
 [![npm](https://img.shields.io/npm/dt/scss-goodies.svg)](https://www.npmjs.com/package/scss-goodies)
 [![npm](https://img.shields.io/npm/v/scss-goodies.svg)](https://www.npmjs.com/package/scss-goodies)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/scss-goodies/README.md)](https://github.com/scriptex/itscss/)

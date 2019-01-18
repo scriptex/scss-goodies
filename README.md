@@ -1,23 +1,29 @@
-[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/scss-helpers/README.md)](https://github.com/scriptex/scss-helpers/)
+[![GitHub release](https://img.shields.io/github/release/scriptex/scss-goodies.svg)](https://github.com/scriptex/scss-goodies/releases/latest)
+[![GitHub issues](https://img.shields.io/github/issues/scriptex/scss-goodies.svg)](https://github.com/scriptex/scss-goodies/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/scriptex/scss-goodies.svg)](https://github.com/scriptex/scss-goodies/commits/master)
+[![Build Status](https://travis-ci.org/scriptex/scss-goodies.svg?branch=master)](https://travis-ci.org/scriptex/scss-goodies)
+[![npm](https://img.shields.io/npm/dt/scss-goodies.svg)](https://www.npmjs.com/package/scss-goodies)
+[![npm](https://img.shields.io/npm/v/scss-goodies.svg)](https://www.npmjs.com/package/scss-goodies)
+[![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/scss-goodies/README.md)](https://github.com/scriptex/itscss/)
 
-# SCSS Helpers
+# SCSS Goodies
 
-SCSS helpers for every day usage
+SCSS helpers and tools for every day usage
 
-This is a WIP repository. For details about the current helpers and tools, please see below.
+For details about the current helpers and tools, please see below.
+
+This is a WIP. New tools and helpers will be added.
 
 ## Download
 
-You can [download](https://github.com/scriptex/scss-helpers/archive/master.zip) this repository directly or install it via `npm` or `yarn`:
+You can [download](https://github.com/scriptex/scss-goodies/archive/master.zip) this repository directly or install it via `npm` or `yarn`:
 
 ```sh
-# later we will have a real name for the package (let's hope so)
-
-npm i https://github.com/scriptex/scss-helpers
+npm i scss-goodies
 
 # or
 
-yarn add https://github.com/scriptex/scss-helpers
+yarn add scss-goodies
 ```
 
 ## Usage
@@ -25,12 +31,12 @@ yarn add https://github.com/scriptex/scss-helpers
 If installed via `npm` or `yarn`, just `@import` the main file:
 
 ```scss
-@import 'scss-helpers';
+@import 'scss-goodies';
 /* or if that does not work */
-@import 'scss-helpers/index.scss';
+@import 'scss-goodies/index.scss';
 ```
 
-If manually downloaded, then copy the `scss-helpers` folder in your application folder and manually import the `index.scss` file or the file that you wish to use.
+If manually downloaded, then copy the `scss-goodies` folder in your application folder and manually import the `index.scss` file or the file that you wish to use.
 
 More details about each file can be found below.
 
@@ -38,14 +44,14 @@ More details about each file can be found below.
 
 ### Grid
 
-This mixins creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used. 
+This mixins creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
 
 For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
 
 You can control the size of the grid items on all supported resolutions by using `data-*` attributes.
 
 ```scss
-@import 'scss-helpers/helpers/grid';
+@import 'scss-goodies/helpers/grid';
 ```
 
 Then use the mixin:
@@ -66,7 +72,7 @@ You can see a demo [here](https://codepen.io/scriptex/pen/pQPKXJ).
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/helpers/rainbow';
+@import 'scss-goodies/helpers/rainbow';
 ```
 
 Then use the mixin:
@@ -90,7 +96,7 @@ You can see a demo [here](https://codepen.io/scriptex/pen/jXjWbQ)
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/helpers/select';
+@import 'scss-goodies/helpers/select';
 ```
 
 Then use the mixin:
@@ -116,7 +122,7 @@ You can see a demo [here](https://codepen.io/scriptex/pen/xQgZBg).
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/helpers/triangle';
+@import 'scss-goodies/helpers/triangle';
 ```
 
 Then use the mixin:
@@ -140,7 +146,7 @@ For more info, please refer to [this CSS Tricks post](https://css-tricks.com/sni
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/helpers/unbreak';
+@import 'scss-goodies/helpers/unbreak';
 ```
 
 Then use the mixin:
@@ -161,14 +167,14 @@ This is an animated SVG loader with predefined SVG image embeded into the styles
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/helpers/loader';
+@import 'scss-goodies/helpers/loader';
 ```
 
 Then use the mixin:
 
 ```scss
 /*
- * @param: $loader     - SVG image code. Defaults to [this](https://github.com/scriptex/scss-helpers/blob/master/helpers/_loader.scss#L3)
+ * @param: $loader     - SVG image code. Defaults to [this](https://github.com/scriptex/scss-goodies/blob/master/helpers/_loader.scss#L3)
  * @param: $repeat     - background-repeat property. Default: no-repeat
  * @param: $position   - background-position property. Default: 50% 50%
  * @param: $size       - background-size property. Default: 2rem 2rem
@@ -188,7 +194,7 @@ Since IE does not support this, the hover will work in any version of IE (above 
 To import only this file, use
 
 ```scss
-@import 'scss-helpers/tools/hover';
+@import 'scss-goodies/tools/hover';
 ```
 
 Then use the media query:
@@ -208,7 +214,7 @@ A handy function which replaces all occurences of a string in another string.
 To import only this file, use
 
 ```scss
-@import 'scss-helpers/tools/string-replace';
+@import 'scss-goodies/tools/string-replace';
 ```
 
 Then use the function:
@@ -234,7 +240,7 @@ This is similar to the `loader` mixin but accepts a valid SVG code as first argu
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/tools/svg-background';
+@import 'scss-goodies/tools/svg-background';
 ```
 
 Then use the mixin:
@@ -258,7 +264,7 @@ This mixins accepts a list of SVG image codes and returns a `background-image` c
 To import only this mixin, use
 
 ```scss
-@import 'scss-helpers/tools/svg-background-multiple';
+@import 'scss-goodies/tools/svg-background-multiple';
 ```
 
 Then use the mixin:
@@ -279,7 +285,7 @@ This function accepts a valid SVG code as string and returns base64 encoded stri
 To import only this function, use
 
 ```scss
-@import 'scss-helpers/tools/svg-url';
+@import 'scss-goodies/tools/svg-url';
 ```
 
 Then use the function:
@@ -315,7 +321,7 @@ body {
 you can do this:
 
 ```scss
-@import 'scss-helpers/tools/v';
+@import 'scss-goodies/tools/v';
 
 body {
 	font-size: v(font-size-base);

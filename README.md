@@ -43,7 +43,7 @@ More details about each file can be found below.
 
 ### Grid
 
-This mixins creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
+This mixin creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
 
 For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
 
@@ -179,6 +179,71 @@ Then use the mixin:
  * @param: $size       - background-size property. Default: 2rem 2rem
  */
 @include loader($loader, $repeat, $position, $size);
+```
+
+---
+
+### Full bleed
+
+This is a mixin for full-width elements. If you want an element to fit the screen width, use this mixin.
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/full-bleed';
+```
+
+Then use the mixin:
+
+```scss
+@include full-bleed();
+```
+
+---
+
+### Aspect ratio
+
+This is a mixin for setting the aspect ratio of elements.
+
+Please see the demo [here](https://codepen.io/scriptex/pen/EzVaZL).
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/aspect-ratio';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $shape - shape of the aspect ratio. Either "rect" or "square". Default: rect
+ */
+@include aspect-ratio($shape);
+```
+
+---
+
+### Auto grid
+
+Progressively enhanced, fully responsive grid without media queries.
+
+Please see the demo [here](https://codepen.io/scriptex/pen/vwNOXK).
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/auto-grid';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $min-size - min-size of a grid item. Default: 16rem
+ * @param: $gap      - gap between grid items. Default: 1rem
+ */
+@include auto-grid(10rem, 0.5rem);
 ```
 
 ## Tools

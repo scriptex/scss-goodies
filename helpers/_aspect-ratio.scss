@@ -1,0 +1,23 @@
+@mixin aspect-ratio($shape: rect) {
+	display: block;
+	position: relative;
+	padding-top: 56.25%;
+
+	@if $shape == square {
+		padding-top: 100%;
+	}
+
+	> * {
+		width: auto;
+		height: auto;
+		min-width: 100%;
+		min-height: 100%;
+		max-width: none;
+		max-height: none;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}

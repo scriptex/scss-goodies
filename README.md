@@ -185,7 +185,7 @@ Then use the mixin:
 
 ### Full bleed
 
-This is a mixin for fullwidth elements. If you want an element to fit the screen width, use this mixin.
+This is a mixin for full-width elements. If you want an element to fit the screen width, use this mixin.
 
 To import only this mixin, use
 
@@ -197,6 +197,27 @@ Then use the mixin:
 
 ```scss
 @include full-bleed();
+```
+
+---
+
+### Aspect ratio
+
+This is a mixin for setting the aspect ratio of elements.
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/aspect-ratio';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $shape - shape of the aspect ratio. Either "rect" or "square". Default: rect
+ */
+@include aspect-ratio($shape);
 ```
 
 ## Tools

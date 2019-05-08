@@ -181,6 +181,24 @@ Then use the mixin:
 @include loader($loader, $repeat, $position, $size);
 ```
 
+---
+
+### Full bleed
+
+This is a mixin for fullwidth elements. If you want an element to fit the screen width, use this mixin.
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/full-bleed';
+```
+
+Then use the mixin:
+
+```scss
+@include full-bleed();
+```
+
 ## Tools
 
 ---

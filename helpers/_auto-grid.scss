@@ -1,0 +1,23 @@
+@mixin auto-grid($min-size: 16rem, $gap: 1rem) {
+	> * {
+		max-width: $min-size;
+	}
+
+	> * + * {
+		margin-top: $gap;
+	}
+
+	@supports (display: grid) {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax($min-size, 1fr));
+		grid-gap: $gap;
+
+		> * {
+			max-width: unset;
+		}
+
+		> * + * {
+			margin-top: unset;
+		}
+	}
+}

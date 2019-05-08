@@ -43,7 +43,7 @@ More details about each file can be found below.
 
 ### Grid
 
-This mixins creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
+This mixin creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
 
 For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
 

@@ -2,11 +2,11 @@ $grid-cols: 12 !default;
 $grid-sizes: 1, 2, 3, 4, 6 !default;
 $grid-gutter: 16px !default; // Use anything but % values cuz Firefox does not like it...
 $grid-element: '.o-grid' !default;
-$grid-outputs-css: true !default;
+$grid-output-css: true !default;
 $grid-breakpoints: (
-	'small': 768px,
-	'medium': 1024px,
-	'large': 1280px
+	'small': 0px,
+	'medium': 768px,
+	'large': 1024px
 ) !default;
 
 @function grid-item-width($columns) {
@@ -40,7 +40,7 @@ $grid-breakpoints: (
 	}
 }
 
-@if ($grid-outputs-css) {
+@if ($grid-output-css) {
 	#{$grid-element} {
 		width: 100%;
 

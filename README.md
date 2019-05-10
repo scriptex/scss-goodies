@@ -33,6 +33,8 @@ If installed via `npm` or `yarn`, just `@import` the main file:
 @import 'scss-goodies';
 /* or if that does not work */
 @import 'scss-goodies/index.scss';
+/* if you're in a webpack context, prepend a ~ in front of the path */
+@import '~scss-goodies';
 ```
 
 If manually downloaded, then copy the `scss-goodies` folder in your application folder and manually import the `index.scss` file or the file that you wish to use.

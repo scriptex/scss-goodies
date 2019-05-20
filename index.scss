@@ -1,16 +1,19 @@
 // Helpers
 @import 'helpers/aspect-ratio';
 @import 'helpers/auto-grid';
+@import 'helpers/font-size';
 @import 'helpers/full-bleed';
 @import 'helpers/grid';
 @import 'helpers/loader';
 @import 'helpers/rainbow';
 @import 'helpers/select';
+@import 'helpers/text-truncate';
 @import 'helpers/triangle';
 @import 'helpers/unbreak';
 
 // Tools
 @import 'tools/hover';
+@import 'tools/mq';
 @import 'tools/string-replace';
 @import 'tools/svg-background-multiple';
 @import 'tools/svg-background';

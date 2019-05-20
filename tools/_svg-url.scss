@@ -1,7 +1,10 @@
 @import './string-replace';
 
-// Based on the svg-encoder by Jakob Eriksen (https://github.com/jakob-e)
-// Original source: http://codepen.io/jakob-e/pen/doMoML
+/**
+ * URL encode a valid SVG string
+ * @param: $svg - any valid SVG code
+ * @return: CSS friendly base64 background-image url
+ */
 @function svg-url($svg) {
 	@if not str-index($svg, xmlns) {
 		$svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');

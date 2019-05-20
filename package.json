@@ -1,11 +1,14 @@
 {
 	"name": "scss-goodies",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "SCSS tools and helpers for every day usage",
 	"keywords": [
 		"SCSS",
 		"SCSS helpers",
-		"SCSS tools"
+		"SCSS tools",
+		"SCSS mixins",
+		"SCSS goodies",
+		"SCSS utilities"
 	],
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/scss-helpers",

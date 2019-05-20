@@ -455,6 +455,51 @@ body {
 }
 ```
 
+---
+
+### Mixin for media query
+
+Get a media query for a given breakpoint.
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/tools/mq';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $breakpoint  - One of the predefined in the third argument
+ * @param: $type        - "min" or "max". "min" makes it mobile-first, "max" makes it desktop-first. Default: "min"
+ * @param: $breakpoints - map of breakpoints. Defaults to $breakpoints below.
+ */
+
+$breakpoints: (
+	'phone': 320px,
+	'phone-wide': 480px,
+	'phablet': 560px,
+	'tablet-small': 640px,
+	'tablet': 768px,
+	'tablet-wide': 1024px,
+	'desktop': 1280px,
+	'desktop-wide': 1440px
+);
+
+body {
+	@include font-size(16);
+
+	@include mq(desktop, max) {
+		@include font-size(14);
+	}
+
+	@include mq(tablet, max) {
+		@include font-size(12);
+	}
+}
+```
+
 ## LICENSE
 
 MIT

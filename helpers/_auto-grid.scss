@@ -1,3 +1,10 @@
+/**
+ * Progressively enhanced, fully responsive grid layout
+ * without any media queries using CSS Grid
+ * @param: $min-size - minimum width of a grid item. Default: 16rem
+ * @param: $gap      - gap between grid items. Default: 1rem
+ * Demo: https://codepen.io/scriptex/pen/vwNOXK
+ */
 @mixin auto-grid($min-size: 16rem, $gap: 1rem) {
 	> * {
 		max-width: $min-size;

@@ -1,5 +1,10 @@
 @import './svg-url';
 
+/**
+ * Create a CSS multiple background declaration out of multiple SVG backgrounds
+ * @param: $backgrounds - list of SVG backgrounds
+ * @return: CSS multiple background-image declaration
+ */
 @mixin multi-background-svg($backgrounds...) {
 	$combined-background: ();
 

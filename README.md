@@ -45,7 +45,22 @@ More details about each file can be found below.
 
 ### Grid
 
-This mixin creates grid rules automagically. There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
+This mixin creates grid rules automagically.
+
+There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
+
+Here are the defaults:
+```scss
+$grid-cols: 12; // Number of grid columns
+$grid-sizes: 1, 2, 3, 4, 6; // Grid column sizes
+$grid-gutter: 16px; // Gap between grid items. Use anything but % values cuz Firefox does not like it...
+$grid-element: '.o-grid'; // Selector for the grid element
+$grid-breakpoints: ( // Map of breakpoints used for media queries
+	'small': 0px,
+	'medium': 768px,
+	'large': 1024px
+);
+```
 
 For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
 
@@ -246,6 +261,30 @@ Then use the mixin:
  * @param: $gap      - gap between grid items. Default: 1rem
  */
 @include auto-grid(10rem, 0.5rem);
+```
+
+---
+
+### Font size
+
+Set the `font-size` of an element in REMs while providing PX fallback.
+
+Please see the demo [here](https://codepen.io/scriptex/pen/vwNOXK).
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/font-size';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $size - font size in pixels (without "px" suffix).
+ * @param: $rem  - font size of 1rem (without "px" suffix). Default: 16
+ */
+@include font-size(12);
 ```
 
 ## Tools

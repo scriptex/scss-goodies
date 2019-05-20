@@ -17,6 +17,13 @@ $grid-breakpoints: (
 	@return calc((#{$column} + #{$extra-space}) - #{$grid-gutter});
 }
 
+/**
+ * A responsive grid based on CSS Flexbox layout
+ * including different sizes based on device width.
+ * @param: $items  - number of items per row. Default: 4
+ * @param: $gutter - gap between grid items. Default: $grid-gutter
+ * Demo: https://codepen.io/scriptex/pen/xQgZBg
+ */
 @mixin grid($items: 4, $gutter: $grid-gutter) {
 	display: flex;
 	flex-wrap: wrap;

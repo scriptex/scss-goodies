@@ -1,4 +1,10 @@
+/**
+ * Set font size in REMs and provide PX fallback
+ * @param: $size - font size in pixels (without "px" suffix).
+ * @param: $rem  - font size of 1rem (without "px" suffix). Default: 16
+ * Demo: https://codepen.io/scriptex/pen/vwNOXK
+ */
 @mixin font-size($size, $rem: 16) {
-    font-size: $size + px;
-    font-size: $size / $rem + rem;
+	font-size: $size;
+	font-size: $size / $rem + rem;
 }

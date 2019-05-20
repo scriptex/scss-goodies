@@ -1,3 +1,10 @@
+/**
+ * Replace a string in another string
+ * @param: $string  - string to search in
+ * @param: $string  - string to search for
+ * @param: $replace - string to replace with
+ * @return: replaced string
+ */
 @function str-replace($string, $search, $replace: '') {
 	$index: str-index($string, $search);
 

@@ -12,9 +12,9 @@
  * @return - Multiple background declaration consisting of
  * many linear gradients
  *
- * It's important that the keys of both maps are the same.
- * 
- * Live demo: https://codepen.io/scriptex/pen/pQPKXJ
+ * It's !important that the keys of both maps are the same.
+ *
+ * Demo: https://codepen.io/scriptex/pen/pQPKXJ
  */
 @mixin rainbow($colors, $stops, $direction: 'horizontal') {
 	$dir: to right;
@@ -37,6 +37,6 @@
 		// prettier-ignore
 		$background: append($background, $gradient no-repeat 0% 0% $slash $size, comma);
 	}
-  
+
 	background: unquote($background);
 }

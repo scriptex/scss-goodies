@@ -1,3 +1,10 @@
+/**
+ * Set aspect ratio
+ * @param: $shape - either "rect" or "square". Default: "rect"
+ *         "rect" means aspect ratio 16/9
+ *         "square" means aspect ration 1/1
+ * Demo: https://codepen.io/scriptex/pen/EzVaZL
+ */
 @mixin aspect-ratio($shape: rect) {
 	display: block;
 	position: relative;

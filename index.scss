@@ -7,13 +7,13 @@
 @import 'helpers/loader';
 @import 'helpers/rainbow';
 @import 'helpers/select';
-@import 'text-truncate';
+@import 'helpers/text-truncate';
 @import 'helpers/triangle';
 @import 'helpers/unbreak';
 
 // Tools
 @import 'tools/hover';
-@import 'mq';
+@import 'tools/mq';
 @import 'tools/string-replace';
 @import 'tools/svg-background-multiple';
 @import 'tools/svg-background';

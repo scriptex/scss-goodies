@@ -287,6 +287,27 @@ Then use the mixin:
 @include font-size(12);
 ```
 
+---
+
+### Text truncate
+
+Prevent a line of text to break by truncating the overflowed text.
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/text-truncate';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $overflow-style - CSS text-overflow. Default: ellipsis
+ */
+@include text-truncate(clip);
+```
+
 ## Tools
 
 ---

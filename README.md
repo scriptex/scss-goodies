@@ -5,6 +5,39 @@
 [![npm](https://img.shields.io/npm/v/scss-goodies.svg)](https://www.npmjs.com/package/scss-goodies)
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/scss-goodies/README.md)](https://github.com/scriptex/itscss/)
 
+---
+---
+
+<h1>Table of contents:</h1>
+
+- [SCSS Goodies](#scss-goodies)
+  - [Download](#download)
+  - [Usage](#usage)
+  - [Helpers](#helpers)
+    - [Grid](#grid)
+    - [Rainbow](#rainbow)
+    - [Select](#select)
+    - [Triangle](#triangle)
+    - [Unbreak](#unbreak)
+    - [SVG Loader](#svg-loader)
+    - [Full bleed](#full-bleed)
+    - [Aspect ratio](#aspect-ratio)
+    - [Auto grid](#auto-grid)
+    - [Font size](#font-size)
+    - [Text truncate](#text-truncate)
+  - [Tools](#tools)
+    - [Hover media query](#hover-media-query)
+    - [String replace function](#string-replace-function)
+    - [Mixin for SVG background](#mixin-for-svg-background)
+    - [Mixin for multiple SVG background image](#mixin-for-multiple-svg-background-image)
+    - [Function for converting SVG code to CSS friendly encoded string](#function-for-converting-svg-code-to-css-friendly-encoded-string)
+    - [Function for easy usage of CSS custom properties](#function-for-easy-usage-of-css-custom-properties)
+    - [Mixin for media query](#mixin-for-media-query)
+  - [LICENSE](#license)
+
+---
+---
+
 # SCSS Goodies
 
 SCSS helpers and tools for every day usage

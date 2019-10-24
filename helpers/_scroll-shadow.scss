@@ -1,0 +1,21 @@
+/**
+ * Create a scrolling shadow
+ * as explained in http://lea.verou.me/2012/04/background-attachment-local/
+ * Demo: https://codepen.io/scriptex/pen/dyyWPLe
+ * @param: $background 	- HEX Color - the color of the shadow
+ * @param: $color		- HEX Color - the color of the shadow
+ * @param: $size 		- number - the size of the shadow
+ */
+@mixin scroll-shadow($background: #fff, $color: #000, $size: 5) {
+	$bgSize: $size + 0px;
+	$bgSizeDouble: $size * 2 + 0px;
+
+	background: linear-gradient($background 30%, rgba($background, 0)),
+		linear-gradient(rgba($background, 0), $background 70%) 0 100%,
+		radial-gradient(farthest-side at 50% 0, rgba($color, 0.5), rgba($color, 0)),
+		radial-gradient(farthest-side at 50% 100%, rgba($color, 0.5), rgba($color, 0)) 0 100%;
+	background-color: $background;
+	background-repeat: no-repeat;
+	background-attachment: local, local, scroll, scroll;
+	background-size: 100% $bgSizeDouble, 100% $bgSizeDouble, 100% $bgSize, 100% $bgSize;
+}

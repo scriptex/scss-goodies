@@ -11,29 +11,30 @@
 <h1>Table of contents:</h1>
 
 - [SCSS Goodies](#scss-goodies)
-  - [Download](#download)
-  - [Usage](#usage)
-  - [Helpers](#helpers)
-    - [Grid](#grid)
-    - [Rainbow](#rainbow)
-    - [Select](#select)
-    - [Triangle](#triangle)
-    - [Unbreak](#unbreak)
-    - [SVG Loader](#svg-loader)
-    - [Full bleed](#full-bleed)
-    - [Aspect ratio](#aspect-ratio)
-    - [Auto grid](#auto-grid)
-    - [Font size](#font-size)
-    - [Text truncate](#text-truncate)
-  - [Tools](#tools)
-    - [Hover media query](#hover-media-query)
-    - [String replace function](#string-replace-function)
-    - [Mixin for SVG background](#mixin-for-svg-background)
-    - [Mixin for multiple SVG background image](#mixin-for-multiple-svg-background-image)
-    - [Function for converting SVG code to CSS friendly encoded string](#function-for-converting-svg-code-to-css-friendly-encoded-string)
-    - [Function for easy usage of CSS custom properties](#function-for-easy-usage-of-css-custom-properties)
-    - [Mixin for media query](#mixin-for-media-query)
-  - [LICENSE](#license)
+	- [Download](#download)
+	- [Usage](#usage)
+	- [Helpers](#helpers)
+		- [Grid](#grid)
+		- [Rainbow](#rainbow)
+		- [Select](#select)
+		- [Triangle](#triangle)
+		- [Unbreak](#unbreak)
+		- [SVG Loader](#svg-loader)
+		- [Full bleed](#full-bleed)
+		- [Aspect ratio](#aspect-ratio)
+		- [Auto grid](#auto-grid)
+		- [Font size](#font-size)
+		- [Text truncate](#text-truncate)
+		- [Scroll Shadow](#scroll-shadow)
+	- [Tools](#tools)
+		- [Hover media query](#hover-media-query)
+		- [String replace function](#string-replace-function)
+		- [Mixin for SVG background](#mixin-for-svg-background)
+		- [Mixin for multiple SVG background image](#mixin-for-multiple-svg-background-image)
+		- [Function for converting SVG code to CSS friendly encoded string](#function-for-converting-svg-code-to-css-friendly-encoded-string)
+		- [Function for easy usage of CSS custom properties](#function-for-easy-usage-of-css-custom-properties)
+		- [Mixin for media query](#mixin-for-media-query)
+	- [LICENSE](#license)
 
 ---
 ---
@@ -339,6 +340,31 @@ Then use the mixin:
  * @param: $overflow-style - CSS text-overflow. Default: ellipsis
  */
 @include text-truncate(clip);
+```
+
+---
+
+### Scroll Shadow
+
+Create a top and bottom scrolling shadow effect as explained in [Lea Verou's article](http://lea.verou.me/2012/04/background-attachment-local/).
+
+Please see the demo [here](https://codepen.io/scriptex/pen/dyyWPLe).
+
+To import only this mixin, use
+
+```scss
+@import 'scss-goodies/helpers/scroll-shadow';
+```
+
+Then use the mixin:
+
+```scss
+/*
+ * @param: $background 	- HEX Color - the color of the shadow
+ * @param: $color		- HEX Color - the color of the shadow
+ * @param: $size 		- number - the size of the shadow
+ */
+@include scroll-shadow(#fff, #000, 10);
 ```
 
 ## Tools

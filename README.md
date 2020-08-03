@@ -183,7 +183,7 @@ Then use the mixin:
  * @param: $background - any valid CSS background declaration. Default: red
  * @param: $radius     - true or false (if false, no radius). Default: true
  */
-@include rainbow($size, $background, $radius);
+@include triangle($size, $background, $radius);
 ```
 
 ---
@@ -409,7 +409,7 @@ $string: 'something meaningful';
 $search: 'meaningful';
 $replace: 'awesome';
 
-$result: str-replace($string, $search, $replace: '');
+$result: str-replace($string, $search, $replace);
 
 /*
  * $result should equal to 'something awesome'

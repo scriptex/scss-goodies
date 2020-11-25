@@ -1,4 +1,9 @@
+/// @access public
+/// @group tools
 $sides: (top, bottom, left, right, all) !default;
+
+/// @access public
+/// @group tools
 $spaceamounts: (0, 10, 20, 30, 50) !default;
 
 /// Generates padding and margin helpers classes

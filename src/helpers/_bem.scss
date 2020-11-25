@@ -1,0 +1,178 @@
+/// @access public
+/// @group bem
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+$element-separator: '__' !default;
+
+/// @access public
+/// @group bem
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+$modifier-separator: '--' !default;
+
+/// Check if a selector contains modifier
+/// @access private
+/// @param {String} $selector
+/// @group bem
+/// @require selector-to-string
+/// @return {Boolean}
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+@function contains-modifier($selector) {
+	$selector: selector-to-string($selector);
+
+	@if str-index($selector, $modifier-separator) {
+		@return true;
+	} @else {
+		@return false;
+	}
+}
+
+/// Convert selector to string
+/// @access private
+/// @param {String} $selector
+/// @group bem
+/// @return {String}
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+@function selector-to-string($selector) {
+	$selector: inspect($selector);
+	$selector: str-slice($selector, 2, -2);
+
+	@return $selector;
+}
+
+/// Get the block from a selector
+/// @param {String} $selector
+/// @access private
+/// @group bem
+/// @require selector-to-string
+/// @return {String}
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+@function get-block($selector) {
+	$selector: selector-to-string($selector);
+	$modifier-start: str-index($selector, $modifier-separator) - 1;
+
+	@return str-slice($selector, 0, $modifier-start);
+}
+
+/// Create a block from element
+/// @param {String} $element
+/// @group bem
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+///  // Input
+///  @include b(block) {
+///     background: red;
+///
+///     @include e(header){
+///         font-size: 14px;
+///
+///         @include m(css) {
+///             font-size: 18px;
+///         }
+///     };
+///  }
+///
+///  // Output
+///  .block {
+///      background: red;
+///  }
+///  .block__header {
+///     font-size: 14px;
+///  }
+///  .block__header--css {
+///     font-size: 18px;
+///  }
+@mixin b($element) {
+	.#{$element} {
+		@content;
+	}
+}
+
+/// Create an element from element
+/// @param {string} $element
+/// @group bem
+/// @require contains-modifier
+/// @require get-block
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+///  // Input
+///  @include b(block) {
+///     background: red;
+///
+///     @include e(header){
+///         font-size: 14px;
+///
+///         @include m(css) {
+///             font-size: 18px;
+///         }
+///     };
+///  }
+///
+///  // Output
+///  .block {
+///      background: red;
+///  }
+///  .block__header {
+///     font-size: 14px;
+///  }
+///  .block__header--css {
+///     font-size: 18px;
+///  }
+@mixin e($element) {
+	$selector: &;
+
+	@if contains-modifier($selector) {
+		$block: get-block($selector);
+
+		@at-root {
+			#{$selector} {
+				#{$block + $element-separator + $element} {
+					@content;
+				}
+			}
+		}
+	} @else {
+		@at-root {
+			#{$selector + $element-separator + $element} {
+				@content;
+			}
+		}
+	}
+}
+
+/// Create a modifier from element
+/// @param {string} $element
+/// @group bem
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+///  // Input
+///  @include b(block) {
+///     background: red;
+///
+///     @include e(header){
+///         font-size: 14px;
+///
+///         @include m(css) {
+///             font-size: 18px;
+///         }
+///     };
+///  }
+///
+///  // Output
+///  .block {
+///      background: red;
+///  }
+///  .block__header {
+///     font-size: 14px;
+///  }
+///  .block__header--css {
+///     font-size: 18px;
+///  }
+@mixin m($element) {
+	@at-root {
+		#{&}#{$modifier-separator + $element} {
+			@content;
+		}
+	}
+}

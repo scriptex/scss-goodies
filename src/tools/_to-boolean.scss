@@ -2,16 +2,16 @@
 /// @access public
 /// @author Atanas Atanasov <scriptex.bg@gmail.com>
 /// @example
-/// to-bool(0)           // false
-/// to-bool(false)       // false
-/// to-bool(null)        // false
-/// to-bool("")          // false
-/// to-bool(())          // false
-/// to-bool(1)           // true
-/// to-bool(true)        // true
-/// to-bool("abc")       // true
-/// to-bool(0 1 2)       // true
-/// to-bool((a: 1, b: 2) // true
+/// to-boolean(0)           // false
+/// to-boolean(false)       // false
+/// to-boolean(null)        // false
+/// to-boolean("")          // false
+/// to-boolean(())          // false
+/// to-boolean(1)           // true
+/// to-boolean(true)        // true
+/// to-boolean("abc")       // true
+/// to-boolean(0 1 2)       // true
+/// to-boolean((a: 1, b: 2) // true
 /// @group tools
 /// @param {any} $value - Any kind of value
 @function to-boolean($value: false) {

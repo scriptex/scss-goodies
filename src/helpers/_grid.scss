@@ -1,14 +1,33 @@
+/// @access public
+/// @group helpers
 $grid-cols: 12 !default;
+
+/// @access public
+/// @group helpers
 $grid-sizes: 1, 2, 3, 4, 6 !default;
+
+/// @access public
+/// @group helpers
 $grid-gutter: 16px !default; // Use anything but % values cuz Firefox does not like it...
+
+/// @access public
+/// @group helpers
 $grid-element: '.o-grid' !default;
+
+/// @access public
+/// @group helpers
 $grid-output-css: false !default;
+
+/// @access public
+/// @group helpers
 $grid-breakpoints: (
 	'small': 0px,
 	'medium': 768px,
 	'large': 1024px
 ) !default;
 
+/// @access private
+/// @group helpers
 @function grid-item-width($columns) {
 	$items: $grid-cols / $columns;
 	$column: 100% / $items;

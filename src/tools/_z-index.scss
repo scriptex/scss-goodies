@@ -1,0 +1,32 @@
+/// Easy z-index management based on list of element names
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+/// $z-indexes: ('modal', 'site-nav', 'site-header', 'site-content', 'site-footer');
+///
+/// // Usage:
+/// .modal { z-index: z(modal); }
+/// .site-nav { z-index: z(site-nav); }
+/// .site-header { z-index: z(site-header); }
+/// .site-content { z-index: z(site-content); }
+/// .site-footer { z-index: z(site-footer; }
+///
+/// // Output
+/// .modal { z-index: 5; }
+/// .site-nav { z-index: 4; }
+/// .site-header { z-index: 3; }
+/// .site-content { z-index: 2; }
+/// .site-footer { z-index: 1; }
+/// @link https://codepen.io/scriptex/pen/qBaWYLr
+/// @group tools
+/// @param {string} $name - Name of the element.
+/// @param {list} $list - List of element names.
+@function z($name, $list: ()) {
+	@if index($list, $name) {
+		@return (length($list) - index($list, $name)) + 1;
+	} @else {
+		@warn 'No "#{$name}" found in the list. Choose one of: #{$list}';
+
+		@return null;
+	}
+}

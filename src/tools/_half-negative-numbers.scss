@@ -1,0 +1,17 @@
+/// Get the half and negative value of a given number
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+/// .element {
+///	  $size: 100px;
+///	  width: $size;
+///	  top: half-negative-number($size);
+/// }
+///
+/// @require half-number
+/// @require negative-number
+/// @group tools
+/// @param {number} $num - A number
+@function half-negative-number($num) {
+	@return negative-number(half-number($num));
+}

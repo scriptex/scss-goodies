@@ -1,0 +1,54 @@
+$sides: (top, bottom, left, right, all) !default;
+$spaceamounts: (0, 10, 20, 30, 50) !default;
+
+/// Generates padding and margin helpers classes
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include spacing-helpers($sides, $spaceamounts, 'padding', '', false);
+/// @link https://codepen.io/scriptex/pen/vYXBrKr
+/// @require to-boolean
+/// @group tools
+/// @param {list} $sides [$sides] - List with sides.
+/// @param {list} $spaceamounts [$spaceamounts] - List with numbers.
+/// @param {string} $paddingPrefix - Prefix for padding classes. If falsy, no padding classes will be generated.
+/// @param {string} $marginPrefix - Prefix for margin classes. If falsy, no margin classes will be generated.
+/// @param {boolean} $shorten [false] - If true, the first letter of each side is used. Otherwise the full side is used.
+@mixin spacing-helpers(
+	$sides: $sides,
+	$spaceamounts: $spaceamounts,
+	$paddingPrefix: '',
+	$marginPrefix: '',
+	$shorten: false
+) {
+	@each $space in $spaceamounts {
+		@each $side in $sides {
+			@if $side == 'all' {
+				@if to-boolean($marginPrefix) {
+					.#{$marginPrefix}#{$space} {
+						margin: #{$space}px;
+					}
+				}
+
+				@if to-boolean($paddingPrefix) {
+					.#{$paddingPrefix}#{$space} {
+						margin: #{$space}px;
+					}
+				}
+			} @else {
+				$suffix: quote(if($shorten, str-slice($side, 0, 1), $side));
+
+				@if to-boolean($marginPrefix) {
+					.#{$marginPrefix}#{$suffix}#{$space} {
+						margin-#{$side}: #{$space}px;
+					}
+				}
+
+				@if to-boolean($paddingPrefix) {
+					.#{$paddingPrefix}#{$suffix}#{$space} {
+						padding-#{$side}: #{$space}px;
+					}
+				}
+			}
+		}
+	}
+}

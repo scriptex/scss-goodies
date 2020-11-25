@@ -1,0 +1,11 @@
+/// Slightly lighten a color
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example tint(#444, 20%)
+/// @example tint($theme-color, 50%)
+/// @group tools
+/// @param {string} $color - Valid CSS color
+/// @param {number} $percentage - Weight of the lightening
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}

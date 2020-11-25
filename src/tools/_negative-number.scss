@@ -1,0 +1,14 @@
+/// Get the negative value of a given number
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+/// .element {
+///	  $size: 100px;
+///	  width: $size;
+///	  top: negative-number($size);
+/// }
+/// @group tools
+/// @param {number} $num - A number
+@function negative-number($num) {
+	@return 0 - $num;
+}

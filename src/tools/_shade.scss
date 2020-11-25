@@ -1,0 +1,11 @@
+/// Slightly darken a color
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example shade(#444, 20%)
+/// @example shade($theme-color, 50%)
+/// @group tools
+/// @param {string} $color - Valid CSS color
+/// @param {number} $percentage - Weight of the darkening
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}

@@ -1,0 +1,14 @@
+/// Get the half of a given number
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+/// .element {
+///	  $size: 100px;
+///	  width: $size;
+///	  height: half-number($size);
+/// }
+/// @group tools
+/// @param {number} $num - A number
+@function half-number($num) {
+	@return $num / 2;
+}

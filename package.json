@@ -2,6 +2,10 @@
 	"name": "scss-goodies",
 	"version": "1.2.0",
 	"description": "SCSS tools and helpers for every day usage",
+	"scripts": {
+		"docs": "sassdoc src --dest docs",
+		"build": "node-sass index.scss dist/index.css"
+	},
 	"keywords": [
 		"SCSS",
 		"SCSS helpers",
@@ -18,5 +22,9 @@
 	},
 	"license": "MIT",
 	"main": "index.scss",
-	"style": "index.scss"
+	"style": "index.scss",
+	"devDependencies": {
+		"node-sass": "5.0.0",
+		"sassdoc": "2.7.3"
+	}
 }

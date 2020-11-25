@@ -6,7 +6,6 @@
 [![Analytics](https://ga-beacon.appspot.com/UA-83446952-1/github.com/scriptex/scss-goodies/README.md)](https://github.com/scriptex/itscss/)
 
 ---
----
 
 <h1>Table of contents:</h1>
 
@@ -34,9 +33,9 @@
 		- [Function for converting SVG code to CSS friendly encoded string](#function-for-converting-svg-code-to-css-friendly-encoded-string)
 		- [Function for easy usage of CSS custom properties](#function-for-easy-usage-of-css-custom-properties)
 		- [Mixin for media query](#mixin-for-media-query)
+	- [Support this project](#support-this-project)
 	- [LICENSE](#license)
 
----
 ---
 
 # SCSS Goodies
@@ -66,7 +65,7 @@ If installed via `npm` or `yarn`, just `@import` the main file:
 ```scss
 @import 'scss-goodies';
 /* or if that does not work */
-@import 'scss-goodies/index.scss';
+@import 'scss-goodies/src/index.scss';
 /* if you're in a webpack context, prepend a ~ in front of the path */
 @import '~scss-goodies';
 ```
@@ -84,12 +83,14 @@ This mixin creates grid rules automagically.
 There are several variables which can be tweaked to match your project's requirement and then the mixin is ready to be used.
 
 Here are the defaults:
+
 ```scss
 $grid-cols: 12; // Number of grid columns
 $grid-sizes: 1, 2, 3, 4, 6; // Grid column sizes
 $grid-gutter: 16px; // Gap between grid items. Use anything but % values cuz Firefox does not like it...
 $grid-element: '.o-grid'; // Selector for the grid element
-$grid-breakpoints: ( // Map of breakpoints used for media queries
+$grid-breakpoints: (
+	// Map of breakpoints used for media queries
 	'small': 0px,
 	'medium': 768px,
 	'large': 1024px
@@ -101,7 +102,7 @@ For a quick demo, please see [this pen](https://codepen.io/scriptex/pen/zMebLX).
 You can control the size of the grid items on all supported resolutions by using `data-*` attributes.
 
 ```scss
-@import 'scss-goodies/helpers/grid';
+@import 'scss-goodies/src/helpers/grid';
 ```
 
 Then use the mixin:
@@ -122,7 +123,7 @@ You can see a demo [here](https://codepen.io/scriptex/pen/pQPKXJ).
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/rainbow';
+@import 'scss-goodies/src/helpers/rainbow';
 ```
 
 Then use the mixin:
@@ -146,7 +147,7 @@ You can see a demo [here](https://codepen.io/scriptex/pen/jXjWbQ)
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/select';
+@import 'scss-goodies/src/helpers/select';
 ```
 
 Then use the mixin:
@@ -172,7 +173,7 @@ You can see a demo [here](https://codepen.io/scriptex/pen/xQgZBg).
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/triangle';
+@import 'scss-goodies/src/helpers/triangle';
 ```
 
 Then use the mixin:
@@ -196,7 +197,7 @@ For more info, please refer to [this CSS Tricks post](https://css-tricks.com/sni
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/unbreak';
+@import 'scss-goodies/src/helpers/unbreak';
 ```
 
 Then use the mixin:
@@ -217,7 +218,7 @@ This is an animated SVG loader with predefined SVG image embeded into the styles
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/loader';
+@import 'scss-goodies/src/helpers/loader';
 ```
 
 Then use the mixin:
@@ -241,7 +242,7 @@ This is a mixin for full-width elements. If you want an element to fit the scree
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/full-bleed';
+@import 'scss-goodies/src/helpers/full-bleed';
 ```
 
 Then use the mixin:
@@ -261,7 +262,7 @@ Please see the demo [here](https://codepen.io/scriptex/pen/EzVaZL).
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/aspect-ratio';
+@import 'scss-goodies/src/helpers/aspect-ratio';
 ```
 
 Then use the mixin:
@@ -284,7 +285,7 @@ Please see the demo [here](https://codepen.io/scriptex/pen/vwNOXK).
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/auto-grid';
+@import 'scss-goodies/src/helpers/auto-grid';
 ```
 
 Then use the mixin:
@@ -308,7 +309,7 @@ Please see the demo [here](https://codepen.io/scriptex/pen/vwNOXK).
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/font-size';
+@import 'scss-goodies/src/helpers/font-size';
 ```
 
 Then use the mixin:
@@ -330,7 +331,7 @@ Prevent a line of text to break by truncating the overflowed text.
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/text-truncate';
+@import 'scss-goodies/src/helpers/text-truncate';
 ```
 
 Then use the mixin:
@@ -353,7 +354,7 @@ Please see the demo [here](https://codepen.io/scriptex/pen/dyyWPLe).
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/helpers/scroll-shadow';
+@import 'scss-goodies/src/helpers/scroll-shadow';
 ```
 
 Then use the mixin:
@@ -379,7 +380,7 @@ Since IE does not support this, the hover will work in any version of IE (above 
 To import only this file, use
 
 ```scss
-@import 'scss-goodies/tools/hover';
+@import 'scss-goodies/src/tools/hover';
 ```
 
 Then use the media query:
@@ -399,7 +400,7 @@ A handy function which replaces all occurences of a string in another string.
 To import only this file, use
 
 ```scss
-@import 'scss-goodies/tools/string-replace';
+@import 'scss-goodies/src/tools/string-replace';
 ```
 
 Then use the function:
@@ -425,7 +426,7 @@ This is similar to the `loader` mixin but accepts a valid SVG code as first argu
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/tools/svg-background';
+@import 'scss-goodies/src/tools/svg-background';
 ```
 
 Then use the mixin:
@@ -449,7 +450,7 @@ This mixins accepts a list of SVG image codes and returns a `background-image` c
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/tools/svg-background-multiple';
+@import 'scss-goodies/src/tools/svg-background-multiple';
 ```
 
 Then use the mixin:
@@ -470,7 +471,7 @@ This function accepts a valid SVG code as string and returns base64 encoded stri
 To import only this function, use
 
 ```scss
-@import 'scss-goodies/tools/svg-url';
+@import 'scss-goodies/src/tools/svg-url';
 ```
 
 Then use the function:
@@ -506,7 +507,7 @@ body {
 you can do this:
 
 ```scss
-@import 'scss-goodies/tools/v';
+@import 'scss-goodies/src/tools/v';
 
 body {
 	font-size: v(font-size-base);
@@ -523,7 +524,7 @@ Get a media query for a given breakpoint.
 To import only this mixin, use
 
 ```scss
-@import 'scss-goodies/tools/mq';
+@import 'scss-goodies/src/tools/mq';
 ```
 
 Then use the mixin:

@@ -1,0 +1,18 @@
+/// Enable hover states on devices which support hover media feature and on IE10 and IE11
+///
+/// Detailed info about the Hover CSS Media Feature can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover).
+/// This media query is implemented in almost all modern browsers and works as expected.
+///
+/// The modern browsers include Chrome, Opera, Safari, Edge, Brave, Vivaldi, etc.
+///
+/// Internet Explorer and Firefox do not understand this media feature and therefore will
+/// simply ignore all rules inside the query.
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include hover {  };
+/// @group tools
+@mixin hover {
+	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+		@content;
+	}
+}

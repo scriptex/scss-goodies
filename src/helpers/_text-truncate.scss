@@ -1,0 +1,12 @@
+/// Keep a line of text on a single line and add ellipsis if the text overflows.
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include text-truncate;
+/// @example @include text-truncate(clip);
+/// @group helpers
+/// @param {string} $overflow-style [ellipsis] - Value for the text-overflow property.
+@mixin text-truncate($overflow-style: ellipsis) {
+	white-space: nowrap;
+	text-overflow: $overflow-style;
+	overflow: hidden;
+}

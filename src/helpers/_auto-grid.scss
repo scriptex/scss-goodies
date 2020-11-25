@@ -1,0 +1,31 @@
+/// Progressively enhanced, fully responsive grid layout without any media queries using CSS Grid
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include auto-grid(16rem, 1rem);
+/// @link https://codepen.io/scriptex/pen/vwNOXK
+/// @group helpers
+/// @param {number} $min-size [16rem] - Minimum size of a grid column.
+/// @param {number} $gap [1rem] - Space between grid columns.
+@mixin auto-grid($min-size: 16rem, $gap: 1rem) {
+	> * {
+		max-width: $min-size;
+	}
+
+	> * + * {
+		margin-top: $gap;
+	}
+
+	@supports (display: grid) {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax($min-size, 1fr));
+		grid-gap: $gap;
+
+		> * {
+			max-width: unset;
+		}
+
+		> * + * {
+			margin-top: unset;
+		}
+	}
+}

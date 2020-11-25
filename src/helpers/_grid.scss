@@ -2,7 +2,7 @@ $grid-cols: 12 !default;
 $grid-sizes: 1, 2, 3, 4, 6 !default;
 $grid-gutter: 16px !default; // Use anything but % values cuz Firefox does not like it...
 $grid-element: '.o-grid' !default;
-$grid-output-css: true !default;
+$grid-output-css: false !default;
 $grid-breakpoints: (
 	'small': 0px,
 	'medium': 768px,
@@ -17,13 +17,36 @@ $grid-breakpoints: (
 	@return calc((#{$column} + #{$extra-space}) - #{$grid-gutter});
 }
 
-/**
- * A responsive grid based on CSS Flexbox layout
- * including different sizes based on device width.
- * @param: $items  - number of items per row. Default: 4
- * @param: $gutter - gap between grid items. Default: $grid-gutter
- * Demo: https://codepen.io/scriptex/pen/xQgZBg
- */
+/// A responsive grid based on CSS Flexbox layout including different sizes based on device width.
+///
+/// This mixin uses several predefined variables which can be modified:
+///
+/// `$grid-cols: 12` - maximum number of columns in the grid.
+///
+/// `$grid-sizes: 1, 2, 3, 4, 6` - list of sizes of the columns in the grid.
+///
+/// `$grid-gutter: 16px` - spacing between columns in the grid.
+///
+/// `$grid-element: '.o-grid'` - selector for the grid element.
+///
+/// `$grid-output-css: true` - boolean which indicates if CSS should be outputted.
+///
+/// `$grid-breakpoints` - a map of named media query breakpoints.
+///
+/// ```
+/// (
+/// 	'small': 0px,
+/// 	'medium': 768px,
+/// 	'large': 1024px
+/// )
+/// ```
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include grid(4, 12);
+/// @link https://codepen.io/scriptex/pen/zMebLX
+/// @group helpers
+/// @param {number} $items [4] - Number of items per row
+/// @param {number} $gutter [$grid-gutter] - Spacing between items
 @mixin grid($items: 4, $gutter: $grid-gutter) {
 	display: flex;
 	flex-wrap: wrap;

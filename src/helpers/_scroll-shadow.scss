@@ -1,11 +1,12 @@
-/**
- * Create a scrolling shadow
- * as explained in http://lea.verou.me/2012/04/background-attachment-local/
- * Demo: https://codepen.io/scriptex/pen/dyyWPLe
- * @param: $background 	- HEX Color - the color of the shadow
- * @param: $color		- HEX Color - the color of the shadow
- * @param: $size 		- number - the size of the shadow
- */
+/// Create a scrolling shadow as explained in http://lea.verou.me/2012/04/background-attachment-local/
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include scroll-shadow(#000, #fff, 4);
+/// @link https://codepen.io/scriptex/pen/dyyWPLe
+/// @group helpers
+/// @param {string} $background [#fff] - HEX background color.
+/// @param {string} $color [#000] - HEX color.
+/// @param {number} $size [5] - Size of the shadow.
 @mixin scroll-shadow($background: #fff, $color: #000, $size: 5) {
 	$bgSize: $size + 0px;
 	$bgSizeDouble: $size * 2 + 0px;

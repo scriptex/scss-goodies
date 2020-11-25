@@ -1,10 +1,13 @@
-/**
- * A triangle with (or without) rounded corners
- * @param: $size - width/height of the triangle. Default: 2rem
- * @param: $background - any valid CSS background declaration. Default: red
- * @param: $radius - true or false (if false, no radius). Default: true
- * Demo: https://codepen.io/scriptex/pen/xQgZBg
- */
+/// A triangle with (or without) rounded corners
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include font-size(20);
+/// @example @include font-size(20, 12);
+/// @link https://codepen.io/scriptex/pen/xQgZBg
+/// @group helpers
+/// @param {number} $size [2rem] - Width and height of the triangle.
+/// @param {string} $background [red] - Background of the triangle.
+/// @param {boolean} $radius [true] - Enable/disable border radius.
 @mixin triangle($size: 2rem, $background: red, $radius: true) {
 	&,
 	&::before,

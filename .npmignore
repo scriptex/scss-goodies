@@ -36,3 +36,7 @@ yarn.lock
 
 # Config files
 renovate.json
+
+# Project specific
+dist
+docs

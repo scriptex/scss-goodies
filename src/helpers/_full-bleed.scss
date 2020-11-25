@@ -1,0 +1,10 @@
+/// Make an element get the full browser width
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include full-bleed;
+/// @group helpers
+@mixin full-bleed {
+	width: 100vw;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}

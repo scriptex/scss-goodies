@@ -1,0 +1,13 @@
+/// Set font size in REMs and provide PX fallback
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include font-size(20);
+/// @example @include font-size(20, 12);
+/// @link https://codepen.io/scriptex/pen/vwNOXK
+/// @group helpers
+/// @param {number} $size - Font size in pixels.
+/// @param {number} $rem [16] - REM font size in pixels.
+@mixin font-size($size, $rem: 16) {
+	font-size: $size;
+	font-size: $size / $rem + rem;
+}

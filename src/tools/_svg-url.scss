@@ -1,10 +1,12 @@
 @import './string-replace';
 
-/**
- * URL encode a valid SVG string
- * @param: $svg - any valid SVG code
- * @return: CSS friendly base64 background-image url
- */
+/// URL encode a valid SVG string
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example svg-url($svg);
+/// @require str-replace
+/// @group tools
+/// @param {string} $svg - Valid SVG image code.
 @function svg-url($svg) {
 	@if not str-index($svg, xmlns) {
 		$svg: str-replace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');

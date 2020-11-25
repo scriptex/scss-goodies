@@ -1,0 +1,15 @@
+@import './svg-url';
+
+/// Create a CSS background declaration out of any valid SVG code
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include background-svg($svg, repeat-x, 50% 50%, cover);
+/// @require svg-url
+/// @group tools
+/// @param {string} $svg - Valid SVG image code.
+/// @param {string} $repeat [no-repeat] - Background repeat value.
+/// @param {number} $position [0 0]- Background position value.
+/// @param {number} $size [100% 100%]- Background size value.
+@mixin background-svg($svg, $repeat: no-repeat, $position: 0 0, $size: 100% 100%) {
+	background: svg-url($svg) $repeat $position / $size;
+}

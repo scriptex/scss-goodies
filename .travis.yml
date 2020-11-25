@@ -1,0 +1,9 @@
+language: node_js
+sudo: false
+node_js:
+    - 'lts/*'
+install:
+    - yarn
+script:
+    - yarn build
+    - yarn docs

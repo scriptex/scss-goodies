@@ -1,16 +1,19 @@
-/*
- * Cross browser mixin for native select field style.
- * @param: $text-color       - Color of the text
- * @param: $border-color     - Color of the border
- * @param: $background-color - Color of the background
- * @param: $shadow-color     - Color of the box-shadow
- * Live demo: https://codepen.io/scriptex/pen/jXjWbQ
- */
 @import '../tools/svg-url';
 
 $triangle-before: '<svg width="19" height="11" viewBox="0 0 19 11"><path fill="';
 $triangle-after: '" d="M18.6067065,0.422572289 C18.3723515,0.182891566 18.0945495,0.0631506024 17.7735597,0.0631506024 L1.18500341,0.0631506024 C0.863883959,0.0631506024 0.586276451,0.182891566 0.351726962,0.422572289 C0.117177474,0.662518072 0,0.946198795 0,1.27414458 C0,1.6020241 0.117177474,1.88570482 0.351726962,2.12545181 L8.64603754,10.6012169 C8.88084642,10.8408976 9.15845392,10.9609036 9.47931399,10.9609036 C9.80017406,10.9609036 10.078041,10.8408976 10.3123959,10.6012169 L18.6067065,2.12538554 C18.8409966,1.88570482 18.958628,1.6020241 18.958628,1.27407831 C18.958628,0.946198795 18.8409966,0.662518072 18.6067065,0.422572289 Z"/></svg>';
 
+/// Cross browser mixin for native select field style.
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include select(#222, #333, #fafafa, #000);
+/// @link https://codepen.io/scriptex/pen/jXjWbQ
+/// @require svg-url
+/// @group helpers
+/// @param {string} $text-color [#444] - HEX color for the text.
+/// @param {string} $border-color [#444] - HEX color for the border.
+/// @param {string} $background-color [#fff] - HEX color for the background.
+/// @param {string} $shadow-color [#000] - HEX color for the box shadow.
 @mixin select($text-color: #444, $border-color: #444, $background-color: #fff, $shadow-color: #000) {
 	font-family: inherit;
 	font-size: 1rem;

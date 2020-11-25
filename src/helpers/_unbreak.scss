@@ -1,0 +1,13 @@
+/// Prevent text from flowing out of its container
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include unbreak;
+/// @example @include unbreak(none);
+/// @group helpers
+/// @param {none | manual | auto} $hyphens [auto] - Value for the hyphens property.
+@mixin unbreak($hyphens: auto) {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	hyphens: $hyphens;
+}

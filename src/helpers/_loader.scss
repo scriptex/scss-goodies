@@ -1,0 +1,21 @@
+@import '../tools/svg-background';
+
+$loader: '<svg width="100" height="100" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#000"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle><path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(0 18 18)"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1.5s" repeatCount="indefinite"></animateTransform></path></g></g></svg>' !default;
+
+/// An animated SVG loader
+/// A default variable `$loader` is available. Looks like this:
+///
+/// <svg width="100" height="100" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#000"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)" stroke-width="2"><circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle><path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(0 18 18)"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1.5s" repeatCount="indefinite"></animateTransform></path></g></g></svg>
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @require {mixin} background-svg
+/// @example @include loader;
+/// @example @include loader($your-svg-string, no-repeat, 0 0, 3rem 1rem);
+/// @group helpers
+/// @param {string} $svg [$loader] - Valid SVG image code.
+/// @param {string} $repeat [no-repeat] - Background repeat value.
+/// @param {number} $position [50% 50%]- Background position value.
+/// @param {number} $size [2rem 2rem]- Background size value.
+@mixin loader($svg: $loader, $repeat: no-repeat, $position: 50% 50%, $size: 2rem 2rem) {
+	@include background-svg($svg, $repeat, $position, $size);
+}

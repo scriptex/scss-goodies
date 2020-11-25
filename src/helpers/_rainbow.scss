@@ -1,0 +1,58 @@
+/// Create a single background image using CSS gradients without blur between color stops.
+///
+/// This can be achieved with a single linear-gradient, but only Firefox will render it properly.
+///
+/// All other browsers will blur the edges of the stops.
+///
+/// This mixin uses two maps - one with colors and one with color stops.
+///
+/// It is important to know the keys of both maps should be the same.
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @link https://codepen.io/scriptex/pen/pQPKXJ
+/// @example
+///   @include rainbow(
+///    $colors: (
+///      'blue': blue,
+///      'green': green,
+///      'orange': orange,
+///      'purple': purple,
+///      'red': red
+///    ),
+///    $stops: (
+///      'blue': 30%,
+///      'green': 45%,
+///      'orange': 62%,
+///      'purple': 87%,
+///      'red': 100%
+///    ),
+///    horizontal
+///  );
+/// @group helpers
+/// @param {map} $colors - Map with named colors.
+/// @param {map} $stops - Map with names color stops.
+/// @param {horizontal | vertical} $direction [horizontal] - Direction of the gradient.
+@mixin rainbow($colors, $stops, $direction: 'horizontal') {
+	$dir: to right;
+	$background: ();
+
+	@if $direction == 'vertical' {
+		$dir: to bottom;
+	}
+
+	@each $name, $color in $colors {
+		$slash: unquote('/');
+		$offset: map-get($stops, $name);
+		$gradient: linear-gradient($dir, $color 0%, $color 100%);
+		$size: $offset 100%;
+
+		@if $direction == 'vertical' {
+			$size: 100% $offset;
+		}
+
+		// prettier-ignore
+		$background: append($background, $gradient no-repeat 0% 0% $slash $size, comma);
+	}
+
+	background: unquote($background);
+}

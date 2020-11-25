@@ -1,0 +1,20 @@
+/// A function to speed up and simplify usage of CSS custom properties in SCSS
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example
+/// :root {
+///   --theme-color: red;
+/// }
+///
+/// body { color: v(theme-color); }
+/// p { color: v(theme-color, #ff0); }
+/// @group tools
+/// @param {string} $var - Name of a CSS custom property with the leading dashes.
+/// @param {string | null} $fallback [null] - CSS custom property fallback
+@function v($var, $fallback: null) {
+	@if ($fallback) {
+		@return var(--#{$var}, #{$fallback});
+	} @else {
+		@return var(--#{$var});
+	}
+}

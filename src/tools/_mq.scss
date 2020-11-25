@@ -1,0 +1,46 @@
+$breakpoints: (
+	'phone': 320px,
+	'phone-wide': 480px,
+	'phablet': 560px,
+	'tablet-small': 640px,
+	'tablet': 768px,
+	'tablet-wide': 1024px,
+	'desktop': 1280px,
+	'desktop-wide': 1440px
+) !default;
+
+/// Get a media query for a given breakpoint.
+/// A predefined map of breakpoints is available and can be modified:
+/// ```
+/// $breakpoints: (
+///   'phone': 320px,
+///   'phone-wide': 480px,
+///   'phablet': 560px,
+///   'tablet-small': 640px,
+///   'tablet': 768px,
+///   'tablet-wide': 1024px,
+///   'desktop': 1280px,
+///   'desktop-wide': 1440px
+/// );
+/// ```
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include mq(phone);
+/// @example @include mq(tablet, max, $breakpoints);
+/// @group tools
+/// @param {string} $breakpoint - A key from the `$breakpoints` map.
+/// @param {min | max} $type [min] - "min" makes it mobile-first, "max" makes it desktop-first.
+/// @param {map} $breakpoints [$breakpoints] A map of named breakpoints.
+@mixin mq($breakpoint, $type: min, $breakpoints: $breakpoints) {
+	@if map_has_key($breakpoints, $breakpoint) {
+		$breakpoint: map_get($breakpoints, $breakpoint);
+
+		@if $type == max {
+			$breakpoint: $breakpoint - 1px;
+		}
+
+		@media only screen and (#{$type}-width: $breakpoint) {
+			@content;
+		}
+	}
+}

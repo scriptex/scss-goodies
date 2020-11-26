@@ -1,10 +1,11 @@
 {
 	"name": "scss-goodies",
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"description": "SCSS tools and helpers for every day usage",
 	"scripts": {
 		"docs": "sassdoc src --dest docs",
-		"build": "node-sass index.scss dist/index.css"
+		"build": "node-sass index.scss dist/index.css",
+		"test": "tape test.js"
 	},
 	"keywords": [
 		"SCSS",
@@ -25,6 +26,7 @@
 	"style": "index.scss",
 	"devDependencies": {
 		"node-sass": "5.0.0",
-		"sassdoc": "2.7.3"
+		"sassdoc": "2.7.3",
+		"tape": "5.0.1"
 	}
 }

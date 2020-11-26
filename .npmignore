@@ -35,8 +35,15 @@ yarn.lock
 .prettierignore
 
 # Config files
+_.config.yml
+_config.yml
+.travis.yml
+.whitesource
+now.json
 renovate.json
 
 # Project specific
+.github
+.vercel
 dist
 docs

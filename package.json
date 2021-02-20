@@ -27,6 +27,6 @@
 	"devDependencies": {
 		"node-sass": "5.0.0",
 		"sassdoc": "2.7.3",
-		"tape": "5.1.1"
+		"tape": "5.2.0"
 	}
 }

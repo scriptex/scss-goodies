@@ -25,7 +25,7 @@
 	"main": "index.scss",
 	"style": "index.scss",
 	"devDependencies": {
-		"node-sass": "6.0.0",
+		"node-sass": "6.0.1",
 		"sassdoc": "2.7.3",
 		"tape": "5.2.2"
 	}

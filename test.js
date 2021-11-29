@@ -26,7 +26,7 @@ tape('Should build successfully', t => {
 tape('Should not leave footprints', t => {
 	const build = resolve(__dirname, 'dist', 'index.css');
 	const content = readFileSync(build, 'utf-8');
-	t.equal(content, '', 'index.css is empty');
+	t.equal(content.trim(), '', 'index.css is empty');
 	t.end();
 });
 

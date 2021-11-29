@@ -1,0 +1,58 @@
+/// A modern CSS reset
+/// @access public
+/// @author Atanas Atanasov <scriptex.bg@gmail.com>
+/// @example @include reset();
+/// @example @include reset($all: true, $box-sizing: true, $image: true, $table: true, $textarea: true, $contenteditable: false);
+/// @group tools
+/// @param {boolean} $all [true] - If `true`, reset all properties for all elements effectively removing all user agent styles. This does not apply to the `display` property.
+/// @param {boolean} $box-sizing [true] - If `true`, sets the `box-sizing` property to `border-box` on all elements.
+/// @param {boolean} $image [true] - If `true`, disallows images to exceed their container's width.
+/// @param {boolean} $table [true] - If `true`, removes the spacing between table cells.
+/// @param {boolean} $textarea [true] - If `true`, reverts the `white-space` property for textarea elements on Safari.
+/// @param {boolean} $contenteditable [true] - If `true`, fixes a bug on Chromium browsers with the `contenteditable` attribute.
+@mixin reset($all: true, $box-sizing: true, $image: true, $table: true, $textarea: true, $contenteditable: true) {
+	@if $all {
+		*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+			all: unset;
+			display: revert;
+		}
+	}
+
+	@if $box-sizing {
+		* {
+			box-sizing: border-box;
+		}
+
+		*::before,
+		*::after {
+			box-sizing: inherit;
+		}
+	}
+
+	@if $image {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	@if $table {
+		table {
+			border-collapse: collapse;
+		}
+	}
+
+	@if $textarea {
+		textarea {
+			white-space: revert;
+		}
+	}
+
+	@if $contenteditable {
+		:where([contenteditable]) {
+			-moz-user-modify: read-write;
+			-webkit-user-modify: read-write;
+			overflow-wrap: break-word;
+			-webkit-line-break: after-white-space;
+		}
+	}
+}

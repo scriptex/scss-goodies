@@ -12,7 +12,17 @@
 /// @example @include hover {  };
 /// @group tools
 @mixin hover {
-	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
-		@content;
+	@media (hover: none) {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		&:active {
+			@content;
+		}
+	}
+
+	@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover: hover) {
+		&:hover {
+			@content;
+		}
 	}
 }

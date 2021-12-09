@@ -1,6 +1,6 @@
 {
 	"name": "scss-goodies",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "SCSS tools and helpers for every day usage",
 	"keywords": [
 		"SCSS",
@@ -19,7 +19,7 @@
 	"scripts": {
 		"docs": "rm -rf docs && sassdoc src --dest docs",
 		"build": "rm -rf dist && sass index.scss dist/index.css --no-source-map",
-		"test": "yarn build && tape test.js"
+		"test": "yarn build && yarn docs && tape test.js"
 	},
 	"author": {
 		"name": "Atanas Atanasov",

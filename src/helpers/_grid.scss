@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /// @access public
 /// @group helpers
 $grid-cols: 12 !default;
@@ -29,9 +31,9 @@ $grid-breakpoints: (
 /// @access private
 /// @group helpers
 @function grid-item-width($columns) {
-	$items: $grid-cols / $columns;
-	$column: 100% / $items;
-	$extra-space: $grid-gutter / $items;
+	$items: math.div($grid-cols, $columns);
+	$column: math.div(100%, $items);
+	$extra-space: math.div($grid-gutter, $items);
 
 	@return calc((#{$column} + #{$extra-space}) - #{$grid-gutter});
 }
@@ -74,7 +76,7 @@ $grid-breakpoints: (
 		margin-bottom: $gutter;
 
 		@if $items > 1 {
-			width: grid-item-width($grid-cols / $items);
+			width: grid-item-width(math.div($grid-cols, $items));
 		} @else {
 			width: 100%;
 		}

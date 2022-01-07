@@ -9,10 +9,11 @@
 @mixin aspect-ratio($shape: rect) {
 	display: block;
 	position: relative;
-	padding-top: 56.25%;
 
 	@if $shape == square {
 		padding-top: 100%;
+	} @else {
+		padding-top: 56.25%;
 	}
 
 	> * {

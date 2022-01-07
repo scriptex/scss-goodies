@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /// Get the half of a given number
 /// @access public
 /// @author Atanas Atanasov <scriptex.bg@gmail.com>
@@ -10,5 +12,5 @@
 /// @group tools
 /// @param {number} $num - A number
 @function half-number($num) {
-	@return $num / 2;
+	@return math.div($num, 2);
 }

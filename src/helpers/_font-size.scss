@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /// Set font size in REMs and provide PX fallback
 /// @access public
 /// @author Atanas Atanasov <scriptex.bg@gmail.com>
@@ -9,5 +11,5 @@
 /// @param {number} $rem [16] - REM font size in pixels.
 @mixin font-size($size, $rem: 16) {
 	font-size: $size;
-	font-size: $size / $rem + rem;
+	font-size: math.div($size, $rem) + rem;
 }

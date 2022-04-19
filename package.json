@@ -47,7 +47,7 @@
 		"sass": "1.50.1"
 	},
 	"devDependencies": {
-		"sassdoc": "2.7.3",
+		"sassdoc": "2.7.4",
 		"tape": "5.5.3"
 	},
 	"peerDependencies": {

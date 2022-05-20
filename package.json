@@ -44,7 +44,7 @@
 	"main": "index.scss",
 	"style": "index.scss",
 	"dependencies": {
-		"sass": "1.51.0"
+		"sass": "1.52.0"
 	},
 	"devDependencies": {
 		"sassdoc": "2.7.4",

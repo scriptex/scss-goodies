@@ -1,6 +1,6 @@
 {
 	"name": "scss-goodies",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "SCSS tools and helpers for every day usage",
 	"keywords": [
 		"SCSS",
@@ -10,39 +10,25 @@
 		"SCSS goodies",
 		"SCSS utilities"
 	],
-	"homepage": "https://atanas.info/projects/scss-goodies.html",
+	"homepage": "https://scss-goodies.atanas.info/",
 	"bugs": {
-		"url": "https://github.com/scriptex/scss-helpers/issues",
-		"email": "scriptex.bg@gmail.com"
+		"url": "https://github.com/scriptex/scss-goodies/issues",
+		"email": "hi@atanas.info"
 	},
 	"license": "MIT",
+	"author": "Atanas Atanasov <hi@atanas.info> (https://atanas.info)",
+	"funding": "https://github.com/sponsors/scriptex",
+	"main": "index.scss",
+	"style": "index.scss",
+	"repository": {
+		"type": "git",
+		"url": "github:scriptex/scss-goodies"
+	},
 	"scripts": {
 		"docs": "rm -rf docs && sassdoc src --dest docs",
 		"build": "rm -rf dist && sass index.scss dist/index.css --no-source-map",
 		"test": "yarn build && yarn docs && tape test.js"
 	},
-	"author": {
-		"name": "Atanas Atanasov",
-		"email": "scriptex.bg@gmail.com",
-		"url": "https://atanas.info"
-	},
-	"funding": [
-		{
-			"type": "individual",
-			"url": "https://www.paypal.me/scriptex"
-		},
-		{
-			"type": "patreon",
-			"url": "https://www.patreon.com/atanas"
-		},
-		{
-			"type": "individual",
-			"url": "https://ko-fi.com/scriptex"
-		}
-	],
-	"repository": "https://github.com/scriptex/scss-helpers",
-	"main": "index.scss",
-	"style": "index.scss",
 	"dependencies": {
 		"sass": "1.55.0"
 	},

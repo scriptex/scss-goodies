@@ -30,7 +30,7 @@
 		"test": "yarn build && yarn docs && tape test.js"
 	},
 	"dependencies": {
-		"sass": "1.55.0"
+		"sass": "1.56.0"
 	},
 	"devDependencies": {
 		"sassdoc": "2.7.4",
